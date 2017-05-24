@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Любовь Сагитова](https://up.htmlacademy.ru/adaptive/11/user/303529).
-* Наставник: `Неизвестно`.
+* Наставник: [Ольга Одноколова](https://up.htmlacademy.ru/htmlcss/17/user/38936).
 
 ---
 
