@@ -1,0 +1,55 @@
+.main-nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  &__wrapper {
+    .container();
+    position: relative;
+  }
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    width: 86px;
+    height: 35px;
+    margin-top: 15px;
+    margin-bottom: 21px;
+    align-self: center;
+  }
+  &__toggler {
+    width: 21px;
+    height: 20px;
+    position: absolute;
+    top: 21px;
+    right: 30px;
+    cursor: pointer;
+  }
+  &__container {
+    display: none;
+    font-weight: 700;
+    font-size: @font-size-main-nav;
+    align-self: center;
+  }
+  &__user-nav {
+    display: flex;
+    flex-direction: column;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__item a,
+  &__search,
+  &__basket {
+    padding-left: 75px;
+    padding-right: 30px;
+    display: block;
+    padding-top: 26px;
+    padding-bottom: 28px;
+    text-decoration: none;
+    color: @text-color;
+    border-top: 1px solid @color-border;
+  }
+}

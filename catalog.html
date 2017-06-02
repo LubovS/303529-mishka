@@ -3,86 +3,108 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html"><img src="http://placehold.it/150x100" alt="Мишка" width="150" height="100"></a>
-      <nav class="main-nav"> <!-- добавить модификатор для открытого состояния-->
-        <button class="main-nav__toggler" type="button"></button>
+      <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <ul class="main-nav__items">
-            <li class="main-nav__item main-nav__active">
-              <a>Каталог товаров</a>
-            </li>
-            <li class="main-nav__item">
-              <a href="form.html">Вязание на заказ</a>
-            </li>
-          </ul>
-          <div class="main-nav__user-nav">
-            <a class="main-nav__search main-nav__search--icon" href="#">Поиск по сайту?</a>
-            <a class="main-nav__basket main-nav__basket--icon" href="#">Корзина: пока пуста</a>
+          <a class="main-nav__logo"><img src="img/logo-mobile.svg" alt="Мишка"></a>
+          <button class="main-nav__toggler" type="button"></button>
+          <div class="main-nav__container"> <!-- добавить модификатор для открытого состояния-->
+            <ul class="main-nav__items">
+              <li class="main-nav__item">
+                <a href="catalog.html">Каталог товаров</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="form.html">Вязание на заказ</a>
+              </li>
+            </ul>
+            <div class="main-nav__user-nav">
+              <a class="main-nav__search main-nav__search--icon" href="#">Поиск по сайту?</a>
+              <a class="main-nav__basket main-nav__basket--icon" href="#">Корзина: пока пуста</a>
+            </div>
           </div>
         </div>
       </nav>
     </header>
     <main>
-      <section class="post">
-        <h1 class="post__title post__title--bg-green">Каталог товаров</h1> <!-- Серый фон -->
-        <article class="product">
-          <a class="product__photo" href="#"><img src="http://placehold.it/150x100" alt="Зайчик-попрыгайчик" width="150" height="100"></a>
-          <div class="product__info">
-            <h2 class="product__title"><a href="">Зайчик-попрыгайчик</a></h2>
-            <span class="product__descr">Рост 30 см, вес 200 г</span>
-          </div>
-          <div class="product__purchase">
-            <span class="product__price">1 200 руб.</span>
-            <a class="product__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
-          </div>
-        </article>
-        <article class="product">
-          <a class="product__photo" href="#"><img src="http://placehold.it/150x100" alt="Корзинка для белья" width="150" height="100"></a>
-          <div class="product__info">
-            <h2 class="product__title"><a href="#">Корзинка для белья</a></h2>
-            <span class="product__descr">Диаметр 15 см, высота 10 см</span>
-          </div>
-          <div class="product__purchase">
-            <span class="product__price">690 руб.</span>
-            <a class="product__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
+      <section class="post-catalog post-catalog__wrapper">
+        <h1 class="post-catalog__title post-catalog__title--bg-green">Каталог товаров</h1> <!-- Серый фон -->
+        <article class="products">
+          <div class="products__border">
+            <a class="products__photo" href="#"><img src="img/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195"></a>
+            <div class="products__container-column">
+              <div class="products__info">
+                <h2 class="products__title"><a href="">Зайчик-попрыгайчик</a></h2>
+                <span class="products__descr">Рост 30 см, вес 200 г</span>
+              </div>
+              <div class="products__purchase">
+                <span class="products__price">1 200 руб.</span>
+                <a class="products__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
+              </div>
+            </div>
           </div>
         </article>
-        <article class="product">
-          <a class="product__photo" href="#"><img src="http://placehold.it/150x100" alt="Большая корзинка для игрушек" width="150" height="100"></a>
-          <div class="product__info">
-            <h2 class="product__title"><a href="#">Большая корзинка для игрушек</a></h2>
-            <span class="product__descr">Диаметр 30 см, высота 30 см</span>
+        <article class="products">
+          <div class="products__border">
+            <a class="products__photo" href="#"><img src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195"></a>
+            <div class="products__container-column">
+              <div class="products__info">
+                <h2 class="products__title"><a href="#">Корзинка для белья</a></h2>
+                <span class="products__descr">Диаметр 15 см, высота 10 см</span>
+              </div>
+              <div class="products__purchase">
+                <span class="products__price">690 руб.</span>
+                <a class="products__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
+              </div>
+            </div>
           </div>
-          <div class="product__purchase">
-            <span class="product__price">1 500 руб.</span>
-            <a class="product__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
+        </article>
+        <article class="products">
+          <div class="products__border">
+            <a class="products__photo" href="#"><img src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195"></a>
+            <div class="products__container-column"> <!-- В дальнейшем зафигачить вправо -->
+              <div class="products__info">
+                <h2 class="products__title"><a href="#">Большая корзинка для игрушек</a></h2>
+                <span class="products__descr">Диаметр 30 см, высота 30 см</span>
+              </div>
+              <div class="products__purchase">
+                <span class="products__price">1 500 руб.</span>
+                <a class="products__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
+              </div>
+            </div>
           </div>
         </article>
         <article class="video-item">
-          <header class="video-item__title-block">
-            <h2 class="video-item__title video-item__title--icon-camera">Процесс производства</h2>
-          </header>
-          <div class="video-item__video">
-            <img class="video-item__screenshot" src="http://placehold.it/150x100" alt="Видео: процесс производства" width="150" height="100">
-            <button class="video-item__btn-play" type="button">Просмотр</button>
+          <div class="video-item__border">
+            <header class="video-item__title-block">
+              <h2 class="video-item__title video-item__title--icon-camera">Процесс производства</h2>
+            </header>
+            <div class="video-item__video">
+              <img class="video-item__screenshot" src="img/video-mobile@1x.jpg" alt="Видео: процесс производства" width="260" height="150">
+              <button class="video-item__btn-play" type="button">Просмотр</button>
+            </div>
+            <div class="video-item__container">
+              <p class="video-item__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+              <a class="video-item__btn btn" href="#">Сделать заказ</a>
+            </div>
           </div>
-          <p class="video-item__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="video-item__btn btn" href="#">Заказать</a>
         </article>
       </section>
     </main>
     <footer class="page-footer">
-      <ul class="page‐footer__social social-links">
-        <li><a class="social-links__link social-links__link‐‐in" href="#">Мы в Инстаграм</a></li>
-        <li><a class="social-links__link social-links__link‐‐fb" href="#">Мы в Фейсбуке</a></li>
-        <li><a class="social-links__link social-links__link‐‐tv" href="#">Мы в Твиттере</a></li>
-      </ul>
-      <p class="page‐footer__copyright">
-        <a href="#">Разработано: <img src="http://placehold.it/150x100" alt="HTML Academy" width="150" height="100"></a>
-      </p>
+      <div class="page-footer__wrapper">
+        <ul class="page-footer__social social-links">
+          <li><a class="social-links__link social-links__link‐‐in" href="#">Мы в Инстаграм</a></li>
+          <li><a class="social-links__link social-links__link‐‐fb" href="#">Мы в Фейсбуке</a></li>
+          <li><a class="social-links__link social-links__link‐‐tv" href="#">Мы в Твиттере</a></li>
+        </ul>
+        <p class="page-footer__copyright">
+          <a href="#">Разработано<img class="page-footer__copyright-logo" src="img/logo-htmlacademy.svg" alt="HTML Academy"></a>
+        </p>
+      </div>
     </footer>
     <div class="pop-up-order"> <!-- добавить модификатор  pop-up-order- -show -->
       <p class="pop-up-order__title">Добавить в корзину</p>
