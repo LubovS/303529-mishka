@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -26,9 +27,9 @@
       </nav>
     </header>
     <main>
-      <section class="post">
-        <h1 class="post__title post__title--bg-green">Вязание на заказ</h1> <!-- Серый фон -->
-        <p class="post__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+      <section class="post-form">
+        <h1 class="post-form__title post__title--bg-green">Вязание на заказ</h1> <!-- Серый фон -->
+        <p class="post-form__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="order‐form" action="#" method="get">
           <fieldset class="order‐form__fieldset">
             <legend class="order-form__title">Тип</legend>
@@ -74,13 +75,13 @@
             </div>
           </fieldset>
           <fieldset class="order‐form__fieldset">
-            <legend class="order-form__title order‐form__label-hidden">E-mail</legend>
+            <legend class="order-form__title">E-mail</legend>
             <div class="order‐form__wrapper order‐form__wrapper--icon-mail">
               <input class="order‐form__text" type="tel" name="e-mail" placeholder="Ваш Email*" required>
             </div>
           </fieldset>
           <fieldset class="order‐form__fieldset">
-            <legend class="order-form__title order‐form__label-hidden">Доп</legend>
+            <legend class="order-form__title">Доп</legend>
             <div class="order‐form__wrapper order‐form__wrapper--icon-mail">
               <textarea class="order‐form__textarea" name="description">Опишите все ваши пожелания к заказу</textarea>
             </div>
