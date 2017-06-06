@@ -2,50 +2,155 @@
   padding: 0 30px;
   margin: 0 auto;
   margin-bottom: 59px;
-  &__border {
-    border: 1px solid @color-border;
+}
+
+.video-item__border {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid @color-border;
+}
+
+.video-item__border:hover {
+  transition: 0.3s ease;
+  box-shadow: 0 6px 10px rgba(0,0,0,0.1);
+}
+
+.video-item__border:active {
+  box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+}
+
+.video-item__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: @font-size-item;
+  color: @text-color-title;
+  padding-left: 89px;
+  padding-top: 24px;
+  padding-bottom: 24px
+}
+
+.video-item__video {
+  position: relative;
+  width: 260px;
+  height: 150px;
+  background: yellow;
+}
+
+.video-item__btn-play {
+  position: absolute;
+  width: 102px;
+  height: 78px;
+  font-size: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-color: red;  //Временно потом уберу!!
+}
+
+.video-item__container {
+  padding: 0 33px;
+}
+
+.video-item__descr {
+  font-size: @font-size-products-descr;
+  margin: 0;
+  padding: 0;
+  padding-top: 27px;
+  padding-bottom: 26px;
+}
+
+.video-item__btn {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 33px;
+}
+
+@media @tablet-widths {
+  .video-item {
+    padding: 0 50px;
+    margin-bottom: 63px;
   }
-  &__title {
-    margin: 0;
-    padding: 0;
-    font-weight: 700;
-    font-size: @font-size-item;
-    color: @text-color-title;
-    padding-left: 89px;
-    padding-top: 24px;
-    padding-bottom: 24px
-  }
-  &__video {
-    position: relative;
-    width: 260px;
-    height: 150px;
-  }
-  &__btn-play {
-    position: absolute;
-    width: 102px;
-    height: 78px;
-    font-size: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    background-color: transparent;
+  .video-item__border {
     border: none;
-    cursor: pointer;
-    background-color: red;  //Временно потом уберу!!
   }
-  &__container {
-    padding: 0 33px;
+  .video-item__title-block {
+    border-top: 1px solid @color-border;
+    border-left: 1px solid @color-border;
+    border-right: 1px solid @color-border;
   }
-  &__descr {
-    font-size: @font-size-item-small;
-    margin: 0;
-    padding: 0;
-    padding-top: 27px;
-    padding-bottom: 26px;
+  .video-item__title {
+    font-size: @font-size-item-desktop;
+    line-height: @line-height-products-item-desktop;
+    padding-left: 107px;
+    padding-top: 39px;
+    padding-bottom: 22px;
   }
-  &__btn {
-    margin-bottom: 33px;
+  .video-item__video {
+    order: -1;
+    position: relative;
+    width: 668px;
+    height: 455px;
+  }
+  .video-item__container {
+    padding: 0 41px;
+    border-left: 1px solid @color-border;
+    border-right: 1px solid @color-border;
+    border-bottom: 1px solid @color-border;
+  }
+  .video-item__descr {
+    font-size: @font-size-products-descr-desktop;
+    line-height: @line-height-products-descr-desktop;
+    padding-top: 10px;
+    padding-bottom: 38px;
+  }
+  .video-item__btn {
+    margin-bottom: 45px;
+  }
+}
+
+@media @desktop-widths {
+  .video-item {
+    padding: 0 50px;
+    margin-bottom: 105px;
+  }
+  .video-item__border {
+    .clearfix();
+    display: block;
+    border: 1px solid @color-border;
+    min-height: 453px;
+  }
+  .video-item__title-block {
+    float: right;
+    padding-right: 57px;
+    width: 232px;
+    border: none;
+  }
+  .video-item__title {
+    padding-top: 97px;
+    padding-left: 0;
+  }
+  .video-item__video {
+    float: left;
+    width: 682px;
+    height: 453px;
+  }
+  .video-item__container {
+    float: right;
+    padding-right: 57px;
+    width: 232px;
+    border: none;
+  }
+  .video-item__descr {
+    padding-bottom: 47px;
+  }
+  .video-item__btn {
+    margin-bottom: 0;
   }
 }

@@ -17,3 +17,11 @@
     width: 1150px;
   }
 }
+
+.clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

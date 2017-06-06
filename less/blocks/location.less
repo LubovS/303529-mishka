@@ -1,65 +1,184 @@
 .location {
-  &__wrapper {
-    .container();
+  .container();
+  margin-bottom: 41px;
+}
+
+.location__container {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.location__title {
+  font-weight: 700;
+  font-size: @font-size-title-loca;
+  line-height: @line-height-h2;
+  color: @text-color-title;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.location__table {
+  margin-bottom: 36px;
+}
+
+.location__email {
+  width: 260px;
+  line-height: @line-height-table;
+  border-collapse: collapse;
+  margin-bottom: 29px;
+}
+
+.location__email-name {
+  vertical-align: top;
+  width: 75px;
+}
+
+.location__email-descr {
+  vertical-align: top;
+}
+
+.location__address {
+  color: inherit;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid @border-lineblue;
+  outline: none;
+}
+
+.location__address:hover,
+.location__address:focus {
+  color: @text-color-location-address;
+}
+
+.location__address:active {
+  opacity: 0.3;
+}
+
+.location__index {
+  width: 230px;
+  line-height: @line-height-table;
+  border-collapse: collapse;
+}
+
+.location__index-name {
+  vertical-align: top;
+  width: 75px;
+}
+
+.location__index-descr {
+  vertical-align: top;
+}
+
+.location__map {
+  width: 320px;
+  height: 457px;
+  background-image: url("../img/map-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-bottom: 40px;
+}
+
+.location__btn-container {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.location__btn {
+  display: block;
+}
+
+@media @tablet-widths {
+  .location {
+    margin-bottom: 59px
   }
-  &__container {
-    margin: 0 auto;
-    padding: 0 30px;
+  .location__container {
+    padding: 0px;
   }
-  &__title {
-    font-weight: 700;
-    font-size: @font-size-title-loca;
-    line-height: @line-height-h2;
-    color: @text-color-title;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 25px;
+  .location__title {
+    padding: 0 45px;
+    padding-right: 150px;
+    font-size: @font-size-title-tablet;
+    line-height: @line-height-title-tablet;
+    margin-bottom: 48px;
   }
-  &__table {
-    margin-bottom: 36px;
+  .location__table {
+    padding: 0 50px;
+    display: flex;
+    margin-bottom: 55px;
   }
-  &__email {
-    width: 260px;
-    line-height: @line-height-table;
-    border-collapse: collapse;
-    margin-bottom: 29px;
+  .location__email {
+    width: 50%;
   }
-  &__email-name {
-    vertical-align: top;
-    width: 76px;
+  .location__index {
+    width: 50%;
   }
-  &__email-descr {
-    vertical-align: top;
-  }
-  &__address {
-    color: inherit;
-    text-decoration: none;
-    padding-bottom: 4px;
-    border-bottom: 2px solid @border-lineblue;
-  }
-  &__index {
-    width: 230px;
-    line-height: @line-height-table;
-    border-collapse: collapse;
-  }
-  &__index-name {
-    vertical-align: top;
-    width: 76px;
-  }
-  &__index-descr {
-    vertical-align: top;
-  }
-  &__map {
-    width: 320px;
+  .location__map {
+    width: auto;
     height: 457px;
-    background-image: @location-bg-map;
+    background-image: url("../img/map-pin.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: 40px;
+    margin-bottom: 56px;
   }
-  &__btn-container {
-    margin: 0 auto;
-    padding: 0 30px;
-    margin-bottom: 41px
+  .location__btn-container {
+    margin: 0;
+    text-align: center;
+  }
+  .location__btn {
+    display: inline-block;
+  }
+}
+
+@media @desktop-widths {
+  .location {
+    margin-bottom: 104px;
+    position: relative;
+    min-height: 457px;
+  }
+  .location__wrapper {
+    .clearfix();
+  }
+  .location__container {
+    float: left;
+    width: 320px;
+    margin: 0;
+    margin-left: 218px;
+    padding: 0;
+    margin-top: 70px;
+  }
+  .location__title {
+    padding: 0;
+    font-size: @font-size-title-desktop;
+    line-height: @line-height-title-desktop;
+    margin-bottom: 47px;
+  }
+  .location__table {
+    padding: 0;
+    margin-left: 5px;
+    display: block;
+    margin-bottom: 79px;
+  }
+  .location__email {
+    width: auto;
+  }
+  .location__index {
+    width: auto;
+  }
+  .location__map {
+    float: right;
+    margin: 0;
+    margin-right: 50px;
+    width: 525px;
+    height: 457px;
+    background-image: url("../img/map-pin.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .location__btn-container {
+    float: left;
+    margin-left: 196px;
+    width: 300px;
+    text-align: left;
   }
 }

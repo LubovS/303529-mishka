@@ -1,29 +1,63 @@
-.additional-nav {
-  &__items {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  &__link {
-    font-weight: 700;
-    font-size: @font-size-add-nav;
-    color: @text-color-invert;
-    display: block;
-    padding-right: 60px;
-    padding-top: 25px;
-    padding-bottom: 30px;
-    text-decoration: none;
-    padding-left: 30px;
-  }
+.additional-nav__items {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .additional-nav__link {
+  font-weight: 700;
+  font-size: @font-size-add-nav;
+  color: @text-color-invert;
+  display: block;
+  padding-right: 100px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+  text-decoration: none;
+  padding-left: 30px;
+  transition: 0.3s ease;
   &--icon-lamp {
     background-color: @bg-color-icon-lamp;
   }
-  &--icon-lego{
+  &--icon-lego {
     background-color: @bg-color-icon-lego;
+  }
+}
+
+.additional-nav__link:active {
+  transition: 0.3s ease;
+  color: @text-color-invert-btn-active;
+}
+
+@media @tablet-widths {
+  .additional-nav__items {
+    padding: 0 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .additional-nav__item {
+    top: 0;
+    position: relative;
+    width: 50%;
+    transition: 0.3s ease;
+  }
+  .additional-nav__link {
+    line-height: @line-height-additional-nav;
+    padding-top: 28px;
+    padding-bottom: 35px;
+    padding-left: 36px;
+    line-height: 30px;
+  }
+  .additional-nav__item:hover,
+  .additional-nav__item:active {
+    top: -5px;
+    transition: 0.3s ease;
+  }
+}
+@media @desktop-widths {
+  .additional-nav__items {
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
