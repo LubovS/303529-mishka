@@ -16,7 +16,7 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--opened');
   }
 });
-       
+
 btnpurchase.addEventListener('click', function(evt) {
   evt.preventDefault();
   popup.classList.add('pop-up-order--open');
