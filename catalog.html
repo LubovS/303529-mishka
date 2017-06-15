@@ -8,75 +8,82 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-nav">
-        <div class="main-nav__wrapper">
-          <a class="main-nav__logo"><img src="img/logo-mobile.svg" alt="Мишка"></a>
-          <button class="main-nav__toggler" type="button"></button>
-          <div class="main-nav__container"> <!-- добавить модификатор для открытого состояния-->
-            <ul class="main-nav__items">
-              <li class="main-nav__item">
-                <a href="catalog.html">Каталог товаров</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="form.html">Вязание на заказ</a>
-              </li>
-            </ul>
-            <div class="main-nav__user-nav">
-              <a class="main-nav__search main-nav__search--icon" href="#">Поиск по сайту?</a>
-              <a class="main-nav__basket main-nav__basket--icon" href="#">Корзина: пока пуста</a>
-            </div>
-          </div>
-        </div>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <a class="main-nav__logo" href="index.html"><img src="img/logo-mobile.svg" alt="Онлайн-магазин: Мишка"></a>
+        <button class="main-nav__toggler" type="button"></button>
+        <ul class="main-nav__items main-nav__items--bg"><!-- добавить модификатор для открытого состояния-->
+          <li class="main-nav__item">
+            <a href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="form.html">Вязание на заказ</a>
+          </li>
+        </ul>
+        <ul class="main-nav__user-nav"><!-- добавить модификатор для открытого состояния-->
+          <li class="main-nav__search main-nav__search--icon"><a href="#">Поиск по сайту?</a></li>
+          <li class="main-nav__basket main-nav__basket--icon"><a href="#">Корзина: пока пуста</a></li>
+        </ul>
+        <ul class="main-nav__desktop-items main-nav__desktop-items--bg">
+          <li class="main-nav__desktop-item">
+            <a href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__desktop-item">
+            <a href="#">Распродажа</a>
+          </li>
+        </ul>
+        <span class="main-nav__information main-nav__information--bg">Бесплатная доставка по России</span>
       </nav>
     </header>
     <main>
-      <section class="post-catalog post-catalog__wrapper">
+      <section class="post-catalog">
         <h1 class="post-catalog__title post-catalog__title--bg-green">Каталог товаров</h1> <!-- Серый фон -->
-        <article class="products">
-          <div class="products__border">
-            <a class="products__photo" href="#"><img src="img/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195"></a>
-            <div class="products__container-column">
-              <div class="products__info">
-                <h2 class="products__title"><a href="">Зайчик-попрыгайчик</a></h2>
-                <span class="products__descr">Рост 30 см, вес 200 г</span>
-              </div>
-              <div class="products__purchase">
-                <span class="products__price">1 200 руб.</span>
-                <a class="products__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
-              </div>
-            </div>
-          </div>
-        </article>
-        <article class="products">
-          <div class="products__border">
-            <a class="products__photo" href="#"><img src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195"></a>
-            <div class="products__container-column">
-              <div class="products__info">
-                <h2 class="products__title"><a href="#">Корзинка для белья</a></h2>
-                <span class="products__descr">Диаметр 15 см, высота 10 см</span>
-              </div>
-              <div class="products__purchase">
-                <span class="products__price">690 руб.</span>
-                <a class="products__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
+        <div class="catalog">
+          <article class="products">
+            <div class="products__border">
+              <a class="products__photo" href="#"><img src="img/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195"></a>
+              <div class="products__container-column">
+                <div class="products__info">
+                  <h2 class="products__title"><a href="">Зайчик-попрыгайчик</a></h2>
+                  <span class="products__descr">Рост 30 см, вес 200 г</span>
+                </div>
+                <div class="products__purchase">
+                  <span class="products__price">1 200 руб.</span>
+                  <a class="products__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
-        <article class="products">
-          <div class="products__border">
-            <a class="products__photo" href="#"><img src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195"></a>
-            <div class="products__container-column"> <!-- В дальнейшем зафигачить вправо -->
-              <div class="products__info">
-                <h2 class="products__title"><a href="#">Большая корзинка для игрушек</a></h2>
-                <span class="products__descr">Диаметр 30 см, высота 30 см</span>
-              </div>
-              <div class="products__purchase">
-                <span class="products__price">1 500 руб.</span>
-                <a class="products__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
+          </article>
+          <article class="products">
+            <div class="products__border">
+              <a class="products__photo" href="#"><img src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195"></a>
+              <div class="products__container-column">
+                <div class="products__info">
+                  <h2 class="products__title"><a href="#">Корзинка для белья</a></h2>
+                  <span class="products__descr">Диаметр 15 см, высота 10 см</span>
+                </div>
+                <div class="products__purchase">
+                  <span class="products__price">690 руб.</span>
+                  <a class="products__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
+          <article class="products">
+            <div class="products__border">
+              <a class="products__photo" href="#"><img src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195"></a>
+              <div class="products__container-column"> <!-- В дальнейшем зафигачить вправо -->
+                <div class="products__info">
+                  <h2 class="products__title"><a href="#">Большая корзинка для игрушек</a></h2>
+                  <span class="products__descr">Диаметр 30 см, высота 30 см</span>
+                </div>
+                <div class="products__purchase">
+                  <span class="products__price">1 500 руб.</span>
+                  <a class="products__btn-purchase product__btn-purchase--btn-basket" href="#">Заказать</a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
         <article class="video-item">
           <div class="video-item__border">
             <header class="video-item__title-block">
@@ -95,31 +102,35 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <ul class="page-footer__social social-links">
-          <li><a class="social-links__link social-links__link‐‐in" href="#">Мы в Инстаграм</a></li>
-          <li><a class="social-links__link social-links__link‐‐fb" href="#">Мы в Фейсбуке</a></li>
-          <li><a class="social-links__link social-links__link‐‐tv" href="#">Мы в Твиттере</a></li>
-        </ul>
-        <p class="page-footer__copyright">
-          <a href="#">Разработано<img class="page-footer__copyright-logo" src="img/logo-htmlacademy.svg" alt="HTML Academy"></a>
-        </p>
-      </div>
+      <a class="page-footer__logo" href="#"><img src="img/logo-mobile.svg" alt="Онлайн-магазин: Мишка" ></a>
+      <ul class="page-footer__social social-links">
+        <li><a class="social-links__link social-links__link‐‐in" href="#">Мы в Инстаграм</a></li>
+        <li><a class="social-links__link social-links__link‐‐fb" href="#">Мы в Фейсбуке</a></li>
+        <li><a class="social-links__link social-links__link‐‐tv" href="#">Мы в Твиттере</a></li>
+      </ul>
+      <p class="page-footer__copyright">
+        <a href="#">Разработано<img class="page-footer__copyright-logo" src="img/logo-htmlacademy.svg" alt="HTML Academy"></a>
+      </p>
     </footer>
-    <div class="pop-up-order"> <!-- добавить модификатор  pop-up-order- -show -->
+    <div class="pop-up-order">
       <p class="pop-up-order__title">Добавить в корзину</p>
-      <form action="#" method="get">
+      <form action="#" method="post">
         <fieldset class="pop-up-order__filter">
           <legend>Выберите размер:</legend>
-          <input class="pop-up-order__radio" type="radio" name="size" id="s" value="s" checked>
-          <label class="pop-up-order__label" for="s">S</label>
-          <input class="pop-up-order__radio" type="radio" name="size" id="m" value="m">
-          <label class="pop-up-order__label" for="m">M</label>
-          <input class="pop-up-order__radio" type="radio" name="size" id="l" value="l">
-          <label class="pop-up-order__label" for="l">L</label>
+          <div class="pop-up-order__wrapper">
+            <input class="pop-up-order__radio" type="radio" name="size" id="s" value="s" checked>
+            <label class="pop-up-order__label" for="s">S</label>
+            <input class="pop-up-order__radio" type="radio" name="size" id="m" value="m">
+            <label class="pop-up-order__label" for="m">M</label>
+            <input class="pop-up-order__radio" type="radio" name="size" id="l" value="l">
+            <label class="pop-up-order__label" for="l">L</label>
+          </div>
         </fieldset>
         <button class="pop-up-order__btn" type="submit">Добавить</button>
       </form>
     </div>
+    <div class="overlay">
+    </div>
+    <script src="js/script.js"></script>
   </body>
 </html>

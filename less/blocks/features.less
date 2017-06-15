@@ -1,37 +1,90 @@
 .features {
-  &__wrapper {
-    .container();
-    margin-bottom: 53px;
+  .container();
+  margin-bottom: 58px;
+}
+
+.features__container {
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.features__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: @font-size-h2;
+  line-height: @line-height-h2;
+  color: @text-color-title;
+}
+
+.features__items {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features__item {
+  width: 250px;
+  margin-top: 83px;
+}
+
+.features__item p {
+  font-weight: 700;
+  font-size: @font-size-features;
+  line-height: @line-height-features;
+  color: @text-color-title;
+  margin: 0;
+  padding: 0;
+}
+
+@media @tablet-widths {
+  .features {
+    margin-bottom: 56px;
   }
-  &__container {
-    margin: 0 auto;
-    padding: 0 30px;
-  }
-  &__title {
-    margin: 0;
+  .features__container {
     padding: 0;
-    font-weight: 700;
-    font-size: @font-size-h2;
-    line-height: @line-height-h2;
-    color: @text-color-title;
   }
-  &__items {
+  .features__title {
+    font-size: @font-size-title-tablet;
+    line-height: @line-height-title-tablet;
+    padding: 0 45px;
+  }
+  .features__items-wrapper {
+    width: 668px;
     display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    flex-direction: row;
+    padding: 0 50px;
+    margin-top: 20px;
   }
-  &__item {
-    width: 250px;
+  .features__items {
+    width: 50%;
+  }
+  .features__item {
+    width: 295px;
     margin-top: 84px;
+    margin-bottom: 27px;
   }
-  &__item p {
+  .features__item p {
     font-weight: 700;
-    font-size: @font-size-features;
-    line-height: @line-height-features;
+    font-size: @font-size-features-desktop;
+    line-height: @line-height-features-desktop;
     color: @text-color-title;
-    margin: 0;
-    padding: 0;
+  }
+}
+
+@media @desktop-widths {
+  .features {
+    margin-bottom: 59px;
+  }
+  .features__title {
+    font-size: @font-size-title-desktop;
+    line-height: @line-height-title-desktop;
+    padding: 0 221px;
+  }
+  .features__items-wrapper {
+    width: 700px;
+    padding: 0 225px;
   }
 }

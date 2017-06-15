@@ -1,12 +1,8 @@
 .btn {
-  display: block;
-
-  padding-top: 13px;
-  padding-bottom: 13px;
-
+  display: inline-block;
+  padding: 13px 38px;
   text-align: center;
   text-transform: uppercase;
-
   font-weight: 700;
   font-size: @font-size-btn;
   line-height: @line-height-btn;
@@ -15,6 +11,17 @@
   color: @text-color;
   border: 2px solid @border-btn;
   background-color: transparent;
-
   cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+  transition: 0.3s ease;
+  background-color: @border-btn;
+  color: @text-color-invert;
+}
+
+.btn:active {
+  background-color: @border-btn;
+  color: @text-color-invert-btn-active;
 }

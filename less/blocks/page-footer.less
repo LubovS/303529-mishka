@@ -1,31 +1,92 @@
 .page-footer {
+  .container();
+  display: flex;
+  flex-direction: column;
   padding-top: 22px;
   background-color: @bg-color-block;
-  &__wrapper {
-    .container();
-  }
-  &__social {
+}
+
+.page-footer__logo {
+  display: none;
+  width: 102px;
+  height: 34px;
+}
+
+.page-footer__social {
+  width: 260px;
+  padding: 0;
+  margin: 0 auto;
+  padding-bottom: 22px;
+  border-bottom: 1px solid @color-borderfooter;
+}
+
+.page-footer__copyright {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 21px;
+  padding-bottom: 24px;
+  text-align: center;
+  font-weight: 700;
+  font-size: @font-size-footer;
+  color: @text-color-title;
+}
+
+.page-footer__copyright a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-footer__copyright-logo {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 28px;
+}
+
+@media @tablet-widths {
+  .page-footer {
+    display: flex;
+    flex-wrap: wrap;
     padding: 0;
-    padding-bottom: 22px;
-    border-bottom: 1px solid @color-borderfooter;
+    flex-direction: row;
+    padding-bottom: 51px;
   }
-  &__copyright {
+  .page-footer__logo {
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 102px;
+    height: 34px;
+    display: block;
+    background: red;
+  }
+  .page-footer__social {
+    width: 220px;
     margin: 0;
     padding: 0;
-    margin-top: 21px;
-    padding-bottom: 24px;
-    text-align: center;
-    font-weight: 700;
-    font-size: @font-size-footer;
-    color: @text-color-title;
+    margin-top: 54px;
+    margin-left: 117px;
+    border-bottom: none;
   }
-  &__copyright a {
-    text-decoration: none;
-    color: inherit;
+  .page-footer__copyright {
+    width: 220px;
+    margin: 0;
+    margin-left: auto;
+    margin-top: 57px;
+    padding: 0;
+    margin-right: 50px;
+    text-align: right;
   }
-  &__copyright-logo {
-    display: inline-block;
-    vertical-align: middle;
-    padding-left: 28px;
+}
+
+@media @desktop-widths  {
+  .page-footer__logo {
+    margin-left: 50px;
+  }
+  .page-footer__social {
+    margin-left: 310px;
+  }
+  .page-footer__copyright {
+    margin-top: 58px;
+    margin-right: 52px;
   }
 }

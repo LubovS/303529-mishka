@@ -1,55 +1,304 @@
 .main-nav {
   display: flex;
   flex-direction: column;
-  position: relative;
-  &__wrapper {
-    .container();
-    position: relative;
-  }
-  &__logo {
-    display: block;
-    margin: 0 auto;
-    width: 86px;
-    height: 35px;
-    margin-top: 15px;
-    margin-bottom: 21px;
-    align-self: center;
-  }
-  &__toggler {
-    width: 21px;
-    height: 20px;
-    position: absolute;
-    top: 21px;
-    right: 30px;
-    cursor: pointer;
-  }
-  &__container {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.main-nav__logo {
+  display: block;
+  width: 86px;
+  height: 35px;
+  margin: auto;
+  margin-top: 23px;
+  margin-bottom: 22px;
+}
+
+.main-nav__logo img {
+  width: 86px;
+  height: 35px;
+}
+
+.main-nav__toggler {
+  display: block;
+  width: 21px;
+  height: 20px;
+  position: absolute;
+  z-index: 40;
+  border: none;
+  background-color: transparent;
+  top: 29px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.main-nav--opened .main-nav__toggler {
+  background-image: url("../img/icon-menu-close.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-nav--closed .main-nav__toggler {
+  background-image: url("../img/icon-menu-open.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main-nav__items,
+.main-nav__user-nav {
+  font-weight: 700;
+  font-size: @font-size-main-nav;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: @bg-color;
+}
+
+.main-nav__item,
+.main-nav__search,
+.main-nav__basket {
+  display: block;
+}
+
+.main-nav__item a,
+.main-nav__search a,
+.main-nav__basket a  {
+  padding-left: 75px;
+  padding-right: 30px;
+  display: block;
+  padding-top: 26px;
+  padding-bottom: 28px;
+  text-decoration: none;
+  color: @text-color;
+  border-top: 1px solid @color-border;
+  outline: none;
+}
+
+.main-nav__information {
+  display: none;
+}
+
+.main-nav__desktop-items {
+  display: none;
+}
+
+@media @mobile-widths-only {
+  .main-nav--closed .main-nav__items {
     display: none;
-    font-weight: 700;
+  }
+  .main-nav--closed .main-nav__user-nav {
+    display: none;
+  }
+  .main-nav--opened {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+  }
+  .main-nav--nojs .main-nav__toggler {
+    display: none;
+  }
+  .main-nav--nojs .main-nav__items {
+    display: block;
+  }
+  .main-nav--nojs .main-nav__user-nav {
+    display: block;
+  }
+}
+
+.main-nav__item a:hover,
+.main-nav__search a:hover,
+.main-nav__basket a:hover,
+.main-nav__desktop-item a:hover,
+.main-nav__item a:focus,
+.main-nav__search a:focus,
+.main-nav__basket a:focus,
+.main-nav__desktop-item a:focus {
+  opacity: 0.6;
+}
+
+.main-nav__item a:active,
+.main-nav__search a:active,
+.main-nav__basket a:active,
+.main-nav__desktop-item a:active {
+  opacity: 0.3;
+}
+
+@media @tablet-widths {
+  .main-nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: auto;
+  }
+  .main-nav__logo {
+    margin: 0;
+    margin-right: auto;
+    margin-left: 50px;
+    margin-top: 23px;
+    width: 113px;
+    height: 43px;
+    order: 1;
+  }
+  .main-nav__logo img {
+    width: 113px;
+    height: 43px;
+  }
+  .main-nav__user-nav {
+    width: 380px;
+    display: flex;
+    order: 2;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin-right: 50px;
+  }
+  .main-nav__search,
+  .main-nav__basket {
+    line-height: @line-height;
+    padding: 32px 0;
+    border: none;
+  }
+  .main-nav__search {
+    font-size: 0px;
+    width: 82px;
+    border-left: 1px solid @color-border;
+  }
+  .main-nav__basket {
+    width: 182px;
+    text-align: right;
+    border-left: 1px solid @color-border;
+    padding-left: 82px;
+  }
+  .main-nav__basket a,
+  .main-nav__search a {
+    padding: 0;
+    border: none;
+  }
+  .main-nav__items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    font-size: @font-size;
+    line-height: @line-height;
+    order: 3;
+    margin-right: auto;
+    border-top: 1px solid @color-border;
+    padding-left: 50px;
+    &--bg-main {
+      background-color: @bg-color-main-nav;
+    }
+    &--bg {
+      background-color: @bg-color-block;
+    }
+  }
+  .main-nav__item {
+    padding: 17px 0;
+    padding-right: 36px;
+    border: none;
+  }
+    .main-nav__item a {
+    padding: 0;
+    border: none;
+  }
+  .main-nav__information {
+    width: 268px;
+    padding: 17px 0;
+    font-size: @font-size;
+    line-height: @line-height;
+    padding-right: 50px;
+    text-align: right;
+    margin-left: auto;
+    display: block;
+    order: 4;
+    border-top: 1px solid @color-border;
+    &--bg-main {
+      background-color: @bg-color-main-nav;
+    }
+    &--bg {
+      background-color: @bg-color-block;
+    }
+  }
+  .main-nav__toggler {
+    display: none;
+  }
+}
+
+@media @desktop-widths {
+  .main-nav__logo {
+    width: 149px;
+    height: 72px;
+    margin: auto;
+    order: 2;
+  }
+  .main-nav__logo img {
+    width: 149px;
+    height: 72px;
+  }
+  .main-nav__user-nav {
+    order: 3;
+    margin-right: 50px;
+  }
+  .main-nav__items {
+    width: 373px;
+    margin: 0;
+    margin-right: 3px;
+    padding: 0;
     font-size: @font-size-main-nav;
-    align-self: center;
+    order: 1;
+    border-top: none;
+    margin-left: 50px;
+    &--bg-main {
+      background-color: transparent;
+    }
+    &--bg {
+      background-color: transparent;
+    }
   }
-  &__user-nav {
-    display: flex;
-    flex-direction: column;
+  .main-nav__item {
+    width: 186px;
+    padding: 31px 0;
+    &:nth-child(even) {
+      text-align: right;
+    }
+    &:nth-child(odd) {
+      border-right: 1px solid @color-border;
+    }
   }
-  &__items {
+  .main-nav__basket {
+    padding-left: 85px;
+  }
+  .main-nav__desktop-items {
+    width: 782px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    font-weight: 700;
+    font-size: @font-size;
     margin: 0;
     padding: 0;
+    padding-left: 50px;
     list-style: none;
+    order: 4;
+    border-top: 1px solid @color-border;
+    &--bg-main {
+      background-color: @bg-color-main-nav;
+    }
+    &--bg {
+      background-color: @bg-color-block;
+    }
   }
-  &__item a,
-  &__search,
-  &__basket {
-    padding-left: 75px;
-    padding-right: 30px;
+  .main-nav__desktop-item {
     display: block;
-    padding-top: 26px;
-    padding-bottom: 28px;
+    padding-right: 61px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
+
+  .main-nav__desktop-item a {
+    display: block;
     text-decoration: none;
     color: @text-color;
-    border-top: 1px solid @color-border;
+    outline: none;
+  }
+  .main-nav__information {
+    padding-right: 50px;
   }
 }
